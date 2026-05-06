@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    gap: 10px;
+}
+
+.item{
+    background-color: red;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.one{
+    grid-column: 1/3;
+}
+
+.three{
+    grid-column: 1/4;
+}

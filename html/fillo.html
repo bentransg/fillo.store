@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fillo - shop</title>
+    <link rel="stylesheet" href="../css/fillo.css">
+</head>
+<body>
+    <header id="header">
+         <div class="container">
+            <div class="logo">
+               <a href="../html/shop.html">
+    <img src="../images/logo.png" alt="">
+</a>
+            </div>
+            <div class="navigation">
+               <div class="nav-left">
+                  <a style="color: red;" href="../html/shop.html">HOME</a>
+                  <a href="../html/fillo.html">SHOP</a>
+                  <a href="https://vnexpress.net">NEWS</a>
+                  <a href="">PAGES</a>
+                  <a href="">CONTACT US</a>
+               </div>
+               <div class="nav-right">
+                  <a href="../html/cart.html" class="cart-icon"> <img src="https://i.pinimg.com/736x/a7/ca/5b/a7ca5be23c46cfd51137c2dff0b551d1.jpg" alt=""></a>
+                  <a href="../html/login.html"><button>Login</button></a>
+                  <a href="../html/signin.html"><button>Sign Up</button></a>
+               </div>
+            </div>
+         </div>
+      </header>
+
+    <section class="hero">
+    <h1>SHOP</h1>
+  </section>
+   <div class="search-section">
+         <form class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button type="submit" id="search-btn">Search</button>
+         </form>
+      </div>      <div id="search-results" class="search-results"></div><!-- product -->
+  <div id="product-section">
+    <div class="right-products">
+      <div class="up-right">
+        <div class="categories">
+    <h2>CATEGORIES.</h2>
+    <div class="category-list">
+      <div class="category-item">
+        <a href="#">
+          <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/ZWG677T-300x300.jpg" alt="Woman Category">
+          WOMAN <span>(2)</span>
+        </a>
+      </div>
+      <div class="category-item">
+        <a href="#">
+          <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/A7GAPNL-300x300.jpg" alt="Sport Category">
+          SPORT <span>(5)</span>
+        </a>
+      </div>
+      <div class="category-item">
+        <a href="#">
+          <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/T6DFUT3-300x300.jpg" alt="Man Category">
+          MAN <span>(8)</span>
+        </a>
+      </div>
+      <div class="category-item">
+        <a href="#">
+          <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/9RPC4LB-300x300.jpg" alt="Casual Category">
+          CASUAL <span>(5)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="down-right">
+  <div class="down-right2">
+    <div class="down-right2-content">
+      <h2>COMFORT FOR<br>WORK OUT</h2>
+      <a href="#">SHOP NOW</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="left-products">
+    <div class="container">
+        <h1> OUR PRODUCTS .</h1>
+        <div class="product-list">
+            <div class="upper-list">
+            
+            </div>
+               <div class="middle-list">
+           
+             </div>
+             <div class="bottom-list">
+                
+             </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+ <footer id="footer">
+   <div class="footer-outside">
+  <div id="footer-container">
+
+<div class="footer-col">
+   <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/logo-white.png" alt="">
+   <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. 
+         Aenean commodo ligula eget dolor.</p>
+<div class="footer-list">
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Other Pages -->
+    <div class="footer-section">
+      <h4>OTHER PAGES</h4>
+      <ul>
+        <li><a href="#">Privacy & Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h4>CONTACT INFO</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 766 Võ Văn Kiệt, Phường 1, Quận 5, TP.HCM</li>
+        <li><i class="fas fa-phone"></i> +84 361154874</li>
+        <li><i class="fas fa-envelope"></i> contact@domain.com</li>
+      </ul>
+   </div>
+    </div>
+  </div>
+</div>
+</div>
+  <div class="footer-bottom">
+    <p>Sneaker Store Template Kit by Jegtheme</p>
+    <p>Copyright © 2026. All rights reserved.</p>
+    <p>Created by Trần Hoàng Minh</p>
+  </div>
+</footer>
+<script type="module"> 
+import { renderproductextra, searchProducts } from "../java/product.js";
+
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get("q")?.trim();
+
+const searchForm = document.querySelector(".search-bar");
+searchForm?.addEventListener("submit", (e) => {
+   e.preventDefault();
+   const term = document.getElementById("search-input")?.value.trim();
+   if (term) {
+      window.location.href = `?q=${encodeURIComponent(term)}`;
+   }
+});
+
+if (query) {
+   document.querySelector(".right-products")?.style.setProperty("display", "none");
+   document.querySelector(".left-products")?.style.setProperty("display", "none");
+   const searchInput = document.getElementById("search-input");
+   if (searchInput) searchInput.value = query;
+   const searchResults = document.getElementById("search-results");
+   if (searchResults) {
+      searchResults.style.display = "block";
+      searchProducts(query, "search-results");
+   }
+} else {
+   renderproductextra("upper-list", 0, 4);
+   renderproductextra("middle-list", 4, 4);
+   renderproductextra("bottom-list", 8, 4);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      background: rgb(32, 32, 181);
+      color: white;
+    }
+    button:hover {
+      opacity: 0.85;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" id="email"/>
+    <span style="color: red; font-size: 12px;" id="email-error"></span>
+    <input type="password" placeholder="Password" id="password" />
+    <span style="color: red; font-size: 12px;" id="pass-error"></span>
+    <button id="login-btn">Sign In</button>
+    <button id="google-login-btn" style="margin-top:10px; background: rgb(32, 32, 181)">
+  Login with Google
+</button>
+    <a href="../html/signin.html">chưa có tk?</a>
+  </div>
+  <script type="module" src="../java/base-config.js"></script>
+  <script type="module" src="../java/login.js"></script>
+</body>
+</html>

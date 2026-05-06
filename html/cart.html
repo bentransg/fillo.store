@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header id="header">
+         <div class="container">
+            <div class="logo">
+               <a href="../html/shop.html">
+    <img src="../images/logo.png" alt="">
+</a>
+
+            </div>
+            <div class="navigation">
+               <div class="nav-left">
+                  <a style="color: red;" href="../html/shop.html">HOME</a>
+                  <a href="../html/fillo.html">SHOP</a>
+                  <a href="https://vnexpress.net">NEWS</a>
+                  <a href="">PAGES</a>
+                  <a href="">CONTACT US</a>
+               </div>
+               <div class="nav-right">
+                  <a href="../html/cart.html" class="cart-icon"> <img src="https://i.pinimg.com/736x/a7/ca/5b/a7ca5be23c46cfd51137c2dff0b551d1.jpg" alt=""></a>
+                  <a href="../html/login.html"><button>Login</button></a>
+                  <a href="../html/signin.html"><button>Sign Up</button></a>
+               </div>
+            </div>
+         </div>
+      </header>
+
+<div class="cart-container">
+  <!-- LEFT -->
+  <div class="cart">
+    <h1>Shopping Cart</h1>
+    <p class="items-count">3 items</p>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/60" />
+      <div class="info">
+        <p>Shirt</p>
+        <strong>Cotton T-shirt</strong>
+      </div>
+
+      <div class="qty">
+        <button onclick="changeQty(this, -1)">-</button>
+        <span>1</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+
+      <p class="price">44</p>
+      <span class="remove">×</span>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/60" />
+      <div class="info">
+        <p>Shirt</p>
+        <strong>Cotton T-shirt</strong>
+      </div>
+
+      <div class="qty">
+        <button onclick="changeQty(this, -1)">-</button>
+        <span>1</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+
+      <p class="price">44</p>
+      <span class="remove">×</span>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/60" />
+      <div class="info">
+        <p>Shirt</p>
+        <strong>Cotton T-shirt</strong>
+      </div>
+
+      <div class="qty">
+        <button onclick="changeQty(this, -1)">-</button>
+        <span>1</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+
+      <p class="price">44</p>
+      <span class="remove">×</span>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="summary">
+    <h2>Summary</h2>
+
+    <div class="row">
+      <span>Items</span>
+      <span id="items">3</span>
+    </div>
+
+    <div class="row">
+      <span>Price</span>
+      <span>€ <span id="subtotal">132</span></span>
+    </div>
+
+    <div class="row">
+      <span>Shipping</span>
+      <select id="shipping" onchange="updateTotal()">
+        <option value="5">Standard - €5</option>
+        <option value="10">Express - €10</option>
+      </select>
+    </div>
+
+    <div class="total">
+      <span>Total</span>
+      <span>€ <span id="total">137</span></span>
+    </div>
+
+    <button class="checkout">Checkout     </button>
+  </div>
+</div>
+
+<footer id="footer">
+   <div class="footer-outside">
+  <div id="footer-container">
+
+<div class="footer-col">
+   <img src="https://templatekit.jegtheme.com/fillo/wp-content/uploads/sites/66/2021/03/logo-white.png" alt="">
+   <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. 
+         Aenean commodo ligula eget dolor.</p>
+<div class="footer-list">
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Other Pages -->
+    <div class="footer-section">
+      <h4>OTHER PAGES</h4>
+      <ul>
+        <li><a href="#">Privacy & Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h4>CONTACT INFO</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 766 Võ Văn Kiệt, Phường 1, Quận 5, TP.HCM</li>
+        <li><i class="fas fa-phone"></i> +84 361154874</li>
+        <li><i class="fas fa-envelope"></i> contact@domain.com</li>
+      </ul>
+   </div>
+    </div>
+  </div>
+</div>
+</div>
+  <div class="footer-bottom">
+    <p>Sneaker Store Template Kit by Jegtheme</p>
+    <p>Copyright © 2026. All rights reserved.</p>
+    <p>Created by Trần Hoàng Minh</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
